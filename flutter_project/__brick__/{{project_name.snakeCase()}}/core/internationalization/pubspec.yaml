@@ -1,0 +1,25 @@
+name: internationalization
+description: Internationalization package (supported languages).
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+
+flutter_intl:
+  enabled: true
+  class_name: S
+  main_locale: en
+  arb_dir: lib/src/l10n
+  output_dir: lib/src/l10n/generated
+
+flutter:
+  generate: true
