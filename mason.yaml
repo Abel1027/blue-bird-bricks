@@ -1,3 +1,5 @@
 bricks:
   flutter_project:
     path: ./flutter_project/
+  flutter_package:
+    path: ./flutter_package/
