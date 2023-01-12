@@ -1,5 +1,5 @@
 bricks:
-  flutter_project:
-    path: ./flutter_project/
-  flutter_package:
-    path: ./flutter_package/
+  blue_bird_flutter_project:
+    path: ./blue_bird_flutter_project/
+  blue_bird_flutter_package:
+    path: ./blue_bird_flutter_package/
