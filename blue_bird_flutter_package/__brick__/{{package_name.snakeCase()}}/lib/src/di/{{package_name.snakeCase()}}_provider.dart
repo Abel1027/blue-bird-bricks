@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:dependencies/dependencies.dart';
 
-class {{package_name.pascalCase()}}Provider implements InjectionModule {
+class {{project_name.pascalCase()}}Provider implements InjectionModule {
   static GetIt tpaGetIt = InjectionModule.injector;
 
   @override

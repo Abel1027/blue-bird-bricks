@@ -1,5 +1,5 @@
-class {{package_name.pascalCase()}}RequestModel {
-  const {{package_name.pascalCase()}}RequestModel({
+class {{project_name.pascalCase()}}RequestModel {
+  const {{project_name.pascalCase()}}RequestModel({
     required this.token,
   });
 

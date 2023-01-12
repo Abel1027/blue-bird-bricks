@@ -1,7 +1,7 @@
-import '../../domain/repositories/{{package_name.snakeCase()}}_respository.dart';
+import '../../domain/repositories/{{project_name.snakeCase()}}_respository.dart';
 
-class {{package_name.pascalCase()}}RepositoryImpl implements {{package_name.pascalCase()}}Repository {
-  const {{package_name.pascalCase()}}RepositoryImpl();
+class {{project_name.pascalCase()}}RepositoryImpl implements {{project_name.pascalCase()}}Repository {
+  const {{project_name.pascalCase()}}RepositoryImpl();
 
   @override
   Future<void> init() async {

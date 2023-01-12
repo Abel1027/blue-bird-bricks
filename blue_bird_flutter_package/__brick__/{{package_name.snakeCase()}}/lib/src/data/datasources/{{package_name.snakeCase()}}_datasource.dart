@@ -1,7 +1,7 @@
-import '../models/{{package_name.snakeCase()}}_request_model.dart';
+import '../models/{{project_name.snakeCase()}}_request_model.dart';
 
-abstract class {{package_name.pascalCase()}}Datasource {
+abstract class {{project_name.pascalCase()}}Datasource {
   Future<void> init({
-    required {{package_name.pascalCase()}}RequestModel request,
+    required {{project_name.pascalCase()}}RequestModel request,
   });
 }

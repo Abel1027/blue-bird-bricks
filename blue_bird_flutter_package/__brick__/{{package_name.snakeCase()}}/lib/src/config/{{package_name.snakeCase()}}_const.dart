@@ -1,5 +1,5 @@
-class {{package_name.pascalCase()}}Const {
-  const {{package_name.pascalCase()}}Const._();
+class {{project_name.pascalCase()}}Const {
+  const {{project_name.pascalCase()}}Const._();
 
-  static const int {{package_name.camelCase()}}ToolbarHeight = 16;
+  static const int {{project_name.camelCase()}}ToolbarHeight = 16;
 }

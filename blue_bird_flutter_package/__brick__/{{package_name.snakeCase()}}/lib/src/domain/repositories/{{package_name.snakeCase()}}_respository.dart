@@ -1,3 +1,3 @@
-abstract class {{package_name.pascalCase()}}Repository {
+abstract class {{project_name.pascalCase()}}Repository {
   Future<void> init();
 }
