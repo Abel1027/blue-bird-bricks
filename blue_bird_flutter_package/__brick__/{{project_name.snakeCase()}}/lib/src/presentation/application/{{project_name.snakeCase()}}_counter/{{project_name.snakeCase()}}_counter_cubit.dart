@@ -1,6 +1,6 @@
 import 'package:dependencies/dependencies.dart';
 
-part '{{project_name.snakeCase()}}_counter_state.dart';
+part '../../../../../../{{package_name.snakeCase()}}/lib/src/presentation/application/{{package_name.snakeCase()}}_counter/{{project_name.snakeCase()}}_counter_state.dart';
 
 class {{project_name.pascalCase()}}CounterCubit extends Cubit<{{project_name.pascalCase()}}CounterState> {
   {{project_name.pascalCase()}}CounterCubit() : super({{project_name.pascalCase()}}CounterState.initial());
