@@ -7,5 +7,5 @@ abstract class InjectionModule {
   static late GetIt injector = GetIt.asNewInstance();
 
   /// Method for registering all module dependencies
-  FutureOr<void> registerDependencies();
+  Future<void> registerDependencies();
 }

@@ -13,3 +13,8 @@ vars:
     description: Package name
     default: bb_flutter_package
     prompt: "Name of Flutter package:"
+  in_project:
+    type: boolean
+    description: Include (true) or not (false) in existing project
+    default: false
+    prompt: "Can include in existing project?"
