@@ -4,7 +4,7 @@ import 'dart:async';
 /// {@template {{project_name.snakeCase()}}_provider}
 /// {{{description}}}
 /// {@endtemplate}
-class {{project_name.pascalCase()}}Provider {{#in_project?}}implements InjectionModule {{/in_project?}}{
+class {{project_name.pascalCase()}}Provider {{#in_project}}implements InjectionModule {{/in_project}}{{^in_project}}{{/in_project}}{
   /// [{{project_name.camelCase()}}GetIt] doc
   {{#in_project}}static GetIt {{project_name.camelCase()}}GetIt = InjectionModule.injector;{{/in_project}}{{^in_project}}static GetIt {{project_name.camelCase()}}GetIt = GetIt.asNewInstance();{{/in_project}}
 
