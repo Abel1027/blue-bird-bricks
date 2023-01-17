@@ -1,5 +1,9 @@
+/// {@template theme_images}
+/// {{{description}}}
+/// {@endtemplate}
 class ThemeImages {
   ThemeImages._();
 
-  // static String myImage = 'assets/images/my-image.png';
+  /// [emptyImage] doc
+  static String emptyImage = 'assets/images/empty_img.png';
 }

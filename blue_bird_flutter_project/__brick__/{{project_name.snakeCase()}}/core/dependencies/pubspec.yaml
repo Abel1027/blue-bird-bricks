@@ -16,14 +16,17 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
-  get_it: ^7.2.0
-  internationalization:
-    path: ../internationalization
-  network:
-    path: ../network
-  theme:
-    path: ../theme
-
-dev_dependencies:
   flutter_test:
     sdk: flutter
+  get_it: ^7.2.0
+  go_router: ^6.0.1
+  internationalization:
+    path: ../internationalization
+  mocktail: ^0.3.0
+  network:
+    path: ../network
+  routes:
+    path: ../routes
+  theme:
+    path: ../theme
+  very_good_analysis: ^3.1.0

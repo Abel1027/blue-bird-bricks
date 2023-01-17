@@ -8,11 +8,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
   dependencies:
     path: ../dependencies
-
-dev_dependencies:
-  flutter_test:
+  flutter:
     sdk: flutter

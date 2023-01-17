@@ -1,5 +1,5 @@
-name: theme
-description: Project theme configuration.
+name: routes
+description: Route's configuration.
 version: 0.0.1
 publish_to: none
 
@@ -12,8 +12,3 @@ dependencies:
     path: ../dependencies
   flutter:
     sdk: flutter
-
-flutter:
-  assets:
-    - assets/images/
-    - assets/svg/

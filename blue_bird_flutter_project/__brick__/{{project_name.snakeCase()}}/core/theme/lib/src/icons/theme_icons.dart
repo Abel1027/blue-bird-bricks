@@ -1,5 +1,9 @@
+/// {@template theme_icons}
+/// {{{description}}}
+/// {@endtemplate}
 class ThemeIcons {
   ThemeIcons._();
 
-  // static const String myIcon = 'assets/svg/my-icon.svg';
+  /// [emptyIcon] doc
+  static const String emptyIcon = 'assets/svg/empty_ico.svg';
 }
