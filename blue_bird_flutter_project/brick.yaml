@@ -12,4 +12,24 @@ vars:
     type: string
     description: Project name
     default: bb_flutter_project
-    prompt: "Name of Flutter project:"
+    prompt: Please enter the Flutter project name.
+  description:
+    type: string
+    description: Description of the project
+    default: A Blue Bird flutter project
+    prompt: Please enter the project description.
+  org_name:
+    type: string
+    description: The organization name
+    default: com.example.bluebird
+    prompt: What is the organization name?
+  platforms:
+    type: array
+    description: The list of supported platforms
+    prompt: Which platforms would you like to support?
+    defaults:
+      - android
+      - ios
+    values:
+      - android
+      - ios
