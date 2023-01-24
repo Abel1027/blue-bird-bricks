@@ -1,5 +1,5 @@
 name: {{project_name.snakeCase()}}
-description: A new blue bird Flutter project.
+description: {{description}}
 
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 

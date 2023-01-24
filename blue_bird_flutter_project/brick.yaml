@@ -16,7 +16,7 @@ vars:
   description:
     type: string
     description: Description of the project
-    default: A Blue Bird flutter project
+    default: A Blue Bird flutter project.
     prompt: Please enter the project description.
   org_name:
     type: string
