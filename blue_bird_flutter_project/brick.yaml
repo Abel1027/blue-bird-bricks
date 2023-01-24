@@ -23,6 +23,11 @@ vars:
     description: The organization name
     default: com.example.bluebird
     prompt: What is the organization name?
+  application_id:
+    type: string
+    description: The application id on Android and Bundle ID on iOS.
+    default: com.example.bluebird.appid
+    prompt: What is the application id?
   platforms:
     type: array
     description: The list of supported platforms
