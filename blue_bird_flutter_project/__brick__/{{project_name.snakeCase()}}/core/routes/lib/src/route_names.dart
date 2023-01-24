@@ -1,6 +1,4 @@
-/// {@template route_names}
-/// {{{description}}}
-/// {@endtemplate}
+/// [RouteNames] doc
 class RouteNames {
   const RouteNames._();
 

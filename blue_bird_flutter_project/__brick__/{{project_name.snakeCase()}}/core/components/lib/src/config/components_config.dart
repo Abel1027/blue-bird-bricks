@@ -1,6 +1,4 @@
-/// {@template components_config}
-/// {{{description}}}
-/// {@endtemplate}
+/// [ComponentsConfig] doc
 class ComponentsConfig {
   const ComponentsConfig._();
 }

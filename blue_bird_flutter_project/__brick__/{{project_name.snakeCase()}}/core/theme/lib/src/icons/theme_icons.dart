@@ -1,6 +1,4 @@
-/// {@template theme_icons}
-/// {{{description}}}
-/// {@endtemplate}
+/// [ThemeIcons] doc
 class ThemeIcons {
   ThemeIcons._();
 

@@ -1,6 +1,4 @@
-/// {@template {{project_name.snakeCase()}}_const}
-/// {{{description}}}
-/// {@endtemplate}
+/// [{{project_name.pascalCase()}}Const] doc
 class {{project_name.pascalCase()}}Const {
   const {{project_name.pascalCase()}}Const._();
 

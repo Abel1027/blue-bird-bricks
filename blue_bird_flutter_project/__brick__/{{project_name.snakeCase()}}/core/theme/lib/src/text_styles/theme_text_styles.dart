@@ -1,6 +1,4 @@
-/// {@template theme_text_styles}
-/// {{{description}}}
-/// {@endtemplate}
+/// [ThemeTextStyles] doc
 class ThemeTextStyles {
   ThemeTextStyles._();
 

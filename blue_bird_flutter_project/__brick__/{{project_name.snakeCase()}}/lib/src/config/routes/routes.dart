@@ -1,8 +1,6 @@
 import 'package:dependencies/dependencies.dart';
 
-/// {@template routes}
-/// {{{description}}}
-/// {@endtemplate}
+/// [Routes] doc
 class Routes {
   const Routes._();
 

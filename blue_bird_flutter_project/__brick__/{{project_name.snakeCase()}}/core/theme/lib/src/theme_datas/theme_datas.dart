@@ -1,8 +1,6 @@
 import 'package:dependencies/dependencies.dart';
 
-/// {@template theme_datas}
-/// {{{description}}}
-/// {@endtemplate}
+/// [ThemeDatas] doc
 class ThemeDatas {
   const ThemeDatas._();
 

@@ -1,6 +1,4 @@
-/// {@template {{project_name.snakeCase()}}_repository}
-/// {{{description}}}
-/// {@endtemplate}
+/// [{{project_name.pascalCase()}}Repository] doc
 abstract class {{project_name.pascalCase()}}Repository {
   /// [init] doc
   Future<void> init();

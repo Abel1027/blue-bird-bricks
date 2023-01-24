@@ -1,6 +1,4 @@
-/// {@template theme_spacers}
-/// {{{description}}}
-/// {@endtemplate}
+/// [ThemeSpacers] doc
 class ThemeSpacers {
   ThemeSpacers._();
 

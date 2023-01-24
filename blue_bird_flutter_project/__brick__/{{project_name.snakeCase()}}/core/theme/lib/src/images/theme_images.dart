@@ -1,6 +1,4 @@
-/// {@template theme_images}
-/// {{{description}}}
-/// {@endtemplate}
+/// [ThemeImages] doc
 class ThemeImages {
   ThemeImages._();
 

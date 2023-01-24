@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// {@template theme_colors}
-/// {{{description}}}
-/// {@endtemplate}
+/// [ThemeColors] doc
 class ThemeColors {
   ThemeColors._();
 
