@@ -10,7 +10,7 @@ class {{project_name.pascalCase()}}Provider {{#in_project}}implements InjectionM
   {{#in_project}}@override
   FutureOr<void> registerDependencies() {
   {{/in_project}}{{^in_project}}FutureOr<void> registerDependencies() {
-  {{/in_project}}_getItThirdPartyLibraries();
+  {{/in_project}}  _getItThirdPartyLibraries();
     _getItBaseUrlSetup();
     _getItDatasourcesSetup();
     _getItRepositoriesSetup();
