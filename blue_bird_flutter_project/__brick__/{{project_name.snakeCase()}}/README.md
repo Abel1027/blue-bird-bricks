@@ -55,6 +55,9 @@ and `Android SDK Platform X`; where `X` represents the version.
 
 ![install-android-studio-mac-3](resources/install-android-studio-mac-3.png)
 
+On OSX 13.1 upon opening Android Studio Electric Eel there is no
+'Verify Settings' part of the Android Studio Setup. 
+
 5. Click on the `Plugins` option from the left menu and select `Flutter` 
 under the `Marketplace` tab.
 
@@ -118,7 +121,8 @@ Every Operating System has its own installer and installation steps.
 ![install-flutter-sdk-mac-1](resources/install-flutter-sdk-mac-1.png)
 
 
-3. Update the path permanently to use the Flutter CLI directly from the terminal:
+3. Update the path permanently to use the Flutter CLI directly from the
+terminal:
 
 ![install-flutter-sdk-mac-2](resources/install-flutter-sdk-mac-2.png)
 
@@ -168,8 +172,31 @@ In some cases you need to do the following:
 
 7. If you run the `flutter doctor` command again and notice that the appear a 
 warning saying `Some Android licenses not accepted...`, run the following 
-command: `flutter doctor –-android-licenses`
+command: `flutter doctor --android-licenses`
 
+If you run the above command and appear the following error: `A JNI error has occurred, please check your installation and try again Exception in thread "main" java.lang.UnsupportedClassVersionError: com/android/prefs/AndroidLocationsProvider has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0`,
+try to downgrade your Java version from Android Studio:
+
+* Navigate to `Android Studio > Settings > Appearance & Behavior > System Settings > Android SDK`
+
+* Select `SDK Tools` and check `Show Package Details` option.
+
+* Expand the `Android SDK Command-line Tools` option and select a previous
+version (i.e., `Android SDK Command-line Tools 8.0`).
+
+* Press `Apply` and the download of the selected version will start.
+
+![install-flutter-sdk-android-license](resources/install-flutter-sdk-android-license.png)
+
+8. If you run the `flutter doctor` command again and notice that the appear a 
+warning saying
+`[!] Android Studio (version 2022.1) ✗ Unable to find bundled Java version.`,
+run the following command: `cd /Applications/Android\ Studio.app/Contents` and
+then `ln -s jbr jre`.
+
+This is on latest Android Studio - Electric Eel version, note that the bundled
+jre directory in the Android Studio installation folder is now renamed to jbr
+according to: https://stackoverflow.com/questions/51281702/unable-to-find-bundled-java-version-on-flutter
 
 ### Windows
 
