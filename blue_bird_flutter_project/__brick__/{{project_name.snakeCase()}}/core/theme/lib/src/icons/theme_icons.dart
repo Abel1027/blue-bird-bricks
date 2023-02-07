@@ -1,7 +1,5 @@
 /// [ThemeIcons] doc
-class ThemeIcons {
-  ThemeIcons._();
-
+mixin ThemeIcons {
   /// [emptyIcon] doc
   static const String emptyIcon = 'assets/svg/empty_ico.svg';
 }

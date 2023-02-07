@@ -1,4 +1,2 @@
 /// [ComponentsConfig] doc
-class ComponentsConfig {
-  const ComponentsConfig._();
-}
+mixin ComponentsConfig {}

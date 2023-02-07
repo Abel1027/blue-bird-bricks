@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// [ThemeColors] doc
-class ThemeColors {
-  ThemeColors._();
-
+mixin ThemeColors {
   /// [myLightColor] doc
   static const Color myLightColor = Color(0xFFFFFFFF);
 

@@ -1,7 +1,5 @@
 /// [RouteNames] doc
-class RouteNames {
-  const RouteNames._();
-
+mixin RouteNames {
   /// [home] doc
   static const String home = 'home';
 }

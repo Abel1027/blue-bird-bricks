@@ -1,9 +1,7 @@
 import 'package:dependencies/dependencies.dart';
 
 /// [ThemeDatas] doc
-class ThemeDatas {
-  const ThemeDatas._();
-
+mixin ThemeDatas {
   /// [light] doc
   static ThemeData light = ThemeData(
     primaryColor: ThemeColors.myLightColor,

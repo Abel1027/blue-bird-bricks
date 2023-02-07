@@ -1,9 +1,7 @@
 import 'package:dependencies/dependencies.dart';
 
 /// [Routes] doc
-class Routes {
-  const Routes._();
-
+mixin Routes {
   /// [routerConfig] doc
   static final RouterConfig<Object> routerConfig = GoRouter(routes: []);
 }
