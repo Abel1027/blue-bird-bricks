@@ -1,4 +1,4 @@
-name: {{project_name.snakeCase()}}
+name: { { project_name.snakeCase() } }
 
 packages:
   - core/*/*
@@ -29,6 +29,12 @@ scripts:
     exec: flutter analyze .
     select-package:
       flutter: true
+
+  l10n:
+    description: Generate l10n internationalization files.
+    exec: flutter gen-l10n
+    select-package:
+      file-exists: l10n.yaml
 
   test:
     description: Run tests in all packages.
