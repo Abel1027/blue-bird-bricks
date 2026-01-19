@@ -1,34 +1,11 @@
-{{#in_project}}import 'package:dependencies/dependencies.dart';{{/in_project}}{{^in_project}}import 'package:equatable/equatable.dart';{{/in_project}}
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-/// {@template {{project_name.snakeCase()}}_entity}
-/// {{{description}}}
-/// {@endtemplate}
-class {{project_name.pascalCase()}}Entity extends Equatable {
-  /// {@macro {{project_name.snakeCase()}}_entity}
-  const {{project_name.pascalCase()}}Entity({
-    required this.text,
-    required this.number,
-  });
+part '{{project_name.snakeCase()}}_entity.freezed.dart';
 
-  /// [text] doc
-  final String text;
-  /// [number] doc
-  final int number;
-
-  /// [copyWith] doc
-  {{project_name.pascalCase()}}Entity copyWith({
-    String? text,
-    int? number,
-  }) {
-    return {{project_name.pascalCase()}}Entity(
-      text: text ?? this.text,
-      number: number ?? this.number,
-    );
-  }
-
-  @override
-  String toString() => '{{project_name.pascalCase()}}Entity(text: $text, number: $number)';
-
-  @override
-  List<Object> get props => [text, number];
+@freezed
+abstract class {{project_name.pascalCase()}}Entity with _${{project_name.pascalCase()}}Entity {
+  const factory {{project_name.pascalCase()}}Entity({
+    required String name,
+    required String description,
+  }) = _{{project_name.pascalCase()}}Entity;
 }

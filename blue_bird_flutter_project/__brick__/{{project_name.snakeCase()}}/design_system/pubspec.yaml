@@ -1,0 +1,24 @@
+name: design_system
+description: Component library for Flutter applications.
+
+publish_to: "none"
+
+version: 0.0.1+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+resolution: workspace
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  alchemist: ^0.11.0
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^7.0.0
+
+flutter:
+  uses-material-design: true

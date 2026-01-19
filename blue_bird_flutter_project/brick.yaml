@@ -2,39 +2,19 @@ name: blue_bird_flutter_project
 
 description: Create a Flutter project using a clean architecture pattern
 
-version: 0.1.0+1
+version: 1.0.0
 
 environment:
-  mason: ">=0.1.0-dev.40 <0.1.0"
+  mason: ">=0.1.2"
 
 vars:
   project_name:
     type: string
     description: Project name
-    default: bb_flutter_project
+    default: blue_bird_flutter_project
     prompt: Please enter the Flutter project name.
-  description:
+  project_description:
     type: string
     description: Description of the project
     default: A Blue Bird flutter project.
     prompt: Please enter the project description.
-  org_name:
-    type: string
-    description: The organization name
-    default: com.example.bluebird
-    prompt: What is the organization name?
-  application_id:
-    type: string
-    description: The application id on Android and Bundle ID on iOS.
-    default: com.example.bluebird.appid
-    prompt: What is the application id?
-  platforms:
-    type: array
-    description: The list of supported platforms
-    prompt: Which platforms would you like to support?
-    defaults:
-      - android
-      - ios
-    values:
-      - android
-      - ios

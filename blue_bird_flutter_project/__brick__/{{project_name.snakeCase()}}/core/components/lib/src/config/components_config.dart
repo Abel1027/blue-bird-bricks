@@ -1,2 +1,0 @@
-/// [ComponentsConfig] doc
-mixin ComponentsConfig {}
