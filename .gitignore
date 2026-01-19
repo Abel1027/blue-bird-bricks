@@ -1,3 +1,4 @@
 .mason/
 generated/
 mason-lock.json
+.DS_Store
