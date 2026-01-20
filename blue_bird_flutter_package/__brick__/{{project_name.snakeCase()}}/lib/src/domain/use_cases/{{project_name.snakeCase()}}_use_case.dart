@@ -13,7 +13,7 @@ class {{project_name.pascalCase()}}UseCase {
 
   final {{project_name.pascalCase()}}Repository _repository;
 
-  Future<{{project_name.pascalCase()}}Entity> execute() async {
+  Future<{{project_name.pascalCase()}}Entity> call() async {
     return _repository.fetch(fromLocal: true);
   }
 }

@@ -13,7 +13,7 @@ class {{project_name.pascalCase()}}Cubit extends Cubit<{{project_name.pascalCase
   final {{project_name.pascalCase()}}UseCase _useCase;
   
   Future<void> update() async {
-    final entity = await _useCase.execute();
+    final entity = await _useCase.call();
 
     final newState = state.copyWith(
       name: entity.name,

@@ -28,7 +28,74 @@ dev_dependencies:
   flutter_launcher_icons: ^0.14.4
   flutter_native_splash: ^2.4.7
   injectable_generator: ^2.7.0
+  melos: ^7.0.0
   very_good_analysis: ^7.0.0
 
 flutter:
   uses-material-design: true
+
+melos:
+  useRootAsPackage: true
+
+  scripts:
+    get:
+      description: Get dependencies in all packages.
+      exec: flutter pub get
+
+    clean:
+      description: Clean all packages.
+      exec: flutter clean
+
+    generate:
+      description: Generate code for all packages.
+      exec: dart run build_runner build --delete-conflicting-outputs
+
+    l10n:
+      description: Build translation files for all packages.
+      exec: flutter gen-l10n
+      packageFilters:
+        fileExists:
+          - l10n.yaml
+
+    analyze:
+      description: Analyze all packages.
+      exec: dart analyze
+
+    format:
+      description: Format all packages.
+      exec: dart format .
+
+    fix:
+      description: Apply analyzer fixes for all packages.
+      exec: dart fix --apply
+
+    update_goldens:
+      description: Update golden files for all packages.
+      exec: flutter test --update-goldens
+      packageFilters:
+        dirExists:
+          - test
+
+    test:
+      description: Run tests for all packages.
+      exec: |
+        flutter pub global activate very_good_cli
+        flutter pub global run very_good_cli:very_good test --coverage
+        flutter pub global activate remove_from_coverage
+        flutter pub global run remove_from_coverage -f coverage/lcov.info -r '.g.dart$','.freezed.dart$','^lib/src/config.*'
+        genhtml coverage/lcov.info -o coverage/
+      packageFilters:
+        dirExists:
+          - test
+
+    generate_icon:
+      description: Generate launcher icons for all platforms.
+      exec: flutter pub run flutter_launcher_icons
+      packageFilters:
+        scope: {{project_name.snakeCase()}}
+
+    generate_splash:
+      description: Generate native splash screens for all platforms.
+      exec: dart run flutter_native_splash:create
+      packageFilters:
+        scope: {{project_name.snakeCase()}}
