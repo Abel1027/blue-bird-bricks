@@ -13,7 +13,7 @@ This is a **lightweight Flutter application** following **Clean Architecture** p
 ```
 ┌─────────────────────────────────────────────┐
 │          Presentation Layer                 │
-│  (Pages, Widgets, Cubits, States)          │
+│  (Pages, Widgets, Cubits, States)           │
 └─────────────────────────────────────────────┘
                     ↓
 ┌─────────────────────────────────────────────┐
