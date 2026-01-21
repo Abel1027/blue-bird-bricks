@@ -4,7 +4,7 @@ A collection of **Mason bricks** for generating well-architected Flutter project
 
 ## 📦 What's Included
 
-This collection contains two main bricks:
+This collection contains three main bricks:
 
 ### 1. **blue_bird_flutter_project** 🚀
 Generate a complete Flutter application with multi-package architecture using Melos workspace.
@@ -22,7 +22,22 @@ Generate a complete Flutter application with multi-package architecture using Me
 
 **Best for**: Starting a new Flutter application with scalable architecture
 
-### 2. **blue_bird_flutter_package** 📚
+### 2. **blue_bird_flutter_lite** ⚡
+Generate a lightweight Flutter application with Clean Architecture in a single package.
+
+**Features**:
+- ✅ Clean Architecture (Presentation, Domain, Data layers)
+- ✅ BLoC pattern with Cubit for state management
+- ✅ Routing with go_router
+- ✅ Dependency injection (get_it + injectable)
+- ✅ Internationalization (i18n) support
+- ✅ Theme and color configuration
+- ✅ Repository pattern with local/remote datasources
+- ✅ Pre-configured code generation
+
+**Best for**: Small to medium-sized apps that need clean architecture without monorepo complexity
+
+### 3. **blue_bird_flutter_package** 📚
 Generate a Flutter package following Clean Architecture principles.
 
 **Features**:
@@ -55,6 +70,7 @@ cd blue-bird-bricks
 
 # Add bricks to Mason
 mason add blue_bird_flutter_project --path ./blue_bird_flutter_project
+mason add blue_bird_flutter_lite --path ./blue_bird_flutter_lite
 mason add blue_bird_flutter_package --path ./blue_bird_flutter_package
 
 # Get bricks
@@ -66,6 +82,7 @@ mason get
 ```bash
 # Once published
 mason add blue_bird_flutter_project --git-url https://github.com/Abel1027/blue-bird-bricks --git-path blue_bird_flutter_project
+mason add blue_bird_flutter_lite --git-url https://github.com/Abel1027/blue-bird-bricks --git-path blue_bird_flutter_lite
 mason add blue_bird_flutter_package --git-url https://github.com/Abel1027/blue-bird-bricks --git-path blue_bird_flutter_package
 ```
 
@@ -104,6 +121,45 @@ my_awesome_app/
 ├── test/                   # Tests
 ├── pubspec.yaml
 └── melos.yaml             # Workspace configuration
+```
+
+### Creating a Lightweight Flutter App
+
+```bash
+# Navigate to where you want to create the app
+cd ~/projects
+
+# Generate the app
+mason make blue_bird_flutter_lite
+
+# Follow the prompts
+# Enter project name: simple_app
+# Enter description: A simple Flutter app
+
+# Navigate to the app
+cd simple_app
+
+# Get dependencies and generate code
+flutter pub get
+flutter pub run build_runner build --delete-conflicting-outputs
+
+# Run the app
+flutter run
+```
+
+**Generated Structure**:
+```
+simple_app/
+├── lib/
+│   ├── main.dart
+│   └── src/
+│       ├── config/         # Constants, DI, Theme, Routes, L10n
+│       ├── presentation/   # UI (Pages, Cubits, Widgets)
+│       ├── domain/         # Business logic (Entities, Use Cases)
+│       └── data/           # Data layer (Repositories, Datasources)
+├── assets/                 # Icons & images
+├── test/                   # Tests
+└── pubspec.yaml
 ```
 
 ### Creating a New Flutter Package
@@ -150,49 +206,65 @@ user_profile/
 
 ```
 ┌─────────────────────────────────────────────┐
-│         Main Application (lib/)              │
-│  - Entry point & initialization              │
-│  - Dependency injection setup                │
-│  - Global routing configuration              │
+│         Main Application (lib/)             │
+│  - Entry point & initialization             │
+│  - Dependency injection setup               │
+│  - Global routing configuration             │
 └─────────────────────────────────────────────┘
                     ↓
 ┌─────────────────────────────────────────────┐
-│          Core Package (core/)                │
+│          Core Package (core/)               │
 │  - Localization (i18n/l10n)                 │
-│  - Route constants                           │
-│  - Shared utilities                          │
+│  - Route constants                          │
+│  - Shared utilities                         │
 └─────────────────────────────────────────────┘
                     ↓
 ┌─────────────────────────────────────────────┐
-│      Design System (design_system/)          │
-│  - Atomic Design components                  │
-│  - Theme configuration                       │
-│  - Color palette                             │
+│      Design System (design_system/)         │
+│  - Atomic Design components                 │
+│  - Theme configuration                      │
+│  - Color palette                            │
 └─────────────────────────────────────────────┘
+```
+
+### Blue Bird Flutter Lite Architecture
+
+```
+┌─────────────────────────────────────────────┐
+│       Single Package Application            │
+│  - Clean Architecture in one package        │
+│  - All layers integrated                    │
+│  - Simpler than multi-package setup         │
+└─────────────────────────────────────────────┘
+           ↓            ↓            ↓
+┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+│Presentation  │ │   Domain     │ │     Data     │
+│   Layer      │ │    Layer     │ │    Layer     │
+└──────────────┘ └──────────────┘ └──────────────┘
 ```
 
 ### Blue Bird Flutter Package Architecture
 
 ```
 ┌─────────────────────────────────────────────┐
-│          Presentation Layer                  │
-│  - Pages (UI screens)                        │
-│  - Cubits (State management)                 │
-│  - Widgets (Reusable components)             │
+│          Presentation Layer                 │
+│  - Pages (UI screens)                       │
+│  - Cubits (State management)                │
+│  - Widgets (Reusable components)            │
 └─────────────────────────────────────────────┘
                     ↓
 ┌─────────────────────────────────────────────┐
-│            Domain Layer                      │
-│  - Entities (Business objects)               │
-│  - Use Cases (Business logic)                │
-│  - Repository Interfaces                     │
+│            Domain Layer                     │
+│  - Entities (Business objects)              │
+│  - Use Cases (Business logic)               │
+│  - Repository Interfaces                    │
 └─────────────────────────────────────────────┘
                     ↓
 ┌─────────────────────────────────────────────┐
-│             Data Layer                       │
-│  - Repository Implementations                │
-│  - Datasources (Local/Remote)                │
-│  - Models & Mappers                          │
+│             Data Layer                      │
+│  - Repository Implementations               │
+│  - Datasources (Local/Remote)               │
+│  - Models & Mappers                         │
 └─────────────────────────────────────────────┘
 ```
 
@@ -370,6 +442,11 @@ blue-bird-bricks/
 │   └── __brick__/                   # Template files
 │       └── {{project_name.snakeCase()}}/
 │
+├── blue_bird_flutter_lite/         # Lite app brick
+│   ├── brick.yaml                   # Brick configuration
+│   └── __brick__/                   # Template files
+│       └── {{project_name.snakeCase()}}/
+│
 └── blue_bird_flutter_package/      # Package brick
     ├── brick.yaml                   # Brick configuration
     └── __brick__/                   # Template files
@@ -401,6 +478,10 @@ Contributions are welcome! Here's how you can help:
 cd blue_bird_flutter_project
 mason make . -o ../test_output
 
+# Test lite app brick
+cd blue_bird_flutter_lite
+mason make . -o ../test_output
+
 # Test package brick
 cd blue_bird_flutter_package
 mason make . -o ../test_output
@@ -412,7 +493,10 @@ mason make . -o ../test_output
 A: Yes! For packages, generate them into your `packages/` directory. For projects, generate components separately and integrate them.
 
 **Q: Do I need to use both bricks together?**  
-A: No, they're independent. Use the project brick for new apps, the package brick for features.
+A: No, they're independent. Use the project brick for full multi-package apps, lite for simpler single-package apps, and the package brick for features.
+
+**Q: When should I use blue_bird_flutter_lite vs blue_bird_flutter_project?**  
+A: Use lite for small to medium apps that don't need multiple packages. Use project for large-scale apps requiring monorepo architecture with separate core and design system packages.
 
 **Q: Can I customize the generated code?**  
 A: Absolutely! The generated code is yours to modify and extend.
