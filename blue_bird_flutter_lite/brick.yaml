@@ -1,0 +1,20 @@
+name: blue_bird_flutter_lite
+
+description: Create a Flutter lightweight app
+
+version: 0.0.1
+
+environment:
+  mason: ">=0.1.2"
+
+vars:
+  project_name:
+    type: string
+    description: App name
+    default: blue_bird_flutter_lite
+    prompt: "Name of Flutter app:"
+  project_description:
+    type: string
+    description: Description of the app
+    default: A Blue Bird flutter app.
+    prompt: "Description of Flutter app:"

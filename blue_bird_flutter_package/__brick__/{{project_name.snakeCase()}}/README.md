@@ -13,7 +13,7 @@ This package follows **Clean Architecture** principles with a layered approach, 
 ```
 ┌─────────────────────────────────────────────┐
 │          Presentation Layer                 │
-│  (Pages, Widgets, Cubits, States)          │
+│  (Pages, Widgets, Cubits, States)           │
 └─────────────────────────────────────────────┘
                     ↓
 ┌─────────────────────────────────────────────┐

@@ -3,3 +3,5 @@ bricks:
     path: ./blue_bird_flutter_project/
   blue_bird_flutter_package:
     path: ./blue_bird_flutter_package/
+  blue_bird_flutter_lite:
+    path: ./blue_bird_flutter_lite/
