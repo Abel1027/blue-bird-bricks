@@ -1,5 +1,5 @@
 name: {{project_name.snakeCase()}}
-description: {{project_description}}
+description: "{{project_description}}"
 
 publish_to: none
 
